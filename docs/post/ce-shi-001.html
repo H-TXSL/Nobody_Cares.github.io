@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<html data-color-mode="light" data-dark-theme="dark-blue" data-light-theme="dark" lang="zh-CN">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
-    
+    <script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>
     <link rel="icon" href="https://avatars.githubusercontent.com/u/110390930?u=e650bc80688d9b64f5c5dd69d6cf9e822186493e&v=4"><script>
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
@@ -344,7 +344,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </table></markdown-accessiblity-table>
 </li>
 <li>脚注<br>
-Hello <sup><a href="#user-content-fn-1-647d054f6f6aee2b1f340a6856e7501e" id="user-content-fnref-1-647d054f6f6aee2b1f340a6856e7501e" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup></li>
+Hello <sup><a href="#user-content-fn-1-07e32f338f6c5bb09af1035a533348dd" id="user-content-fnref-1-07e32f338f6c5bb09af1035a533348dd" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup></li>
 </ul>
 </li>
 <li><strong>代码</strong>
@@ -408,9 +408,9 @@ File-Preferences-Settings</p>
 </ul>
 <section data-footnotes="" class="footnotes"><h2 id="footnote-label" class="sr-only">Footnotes</h2>
 <ol>
-<li id="user-content-fn-1-647d054f6f6aee2b1f340a6856e7501e">
+<li id="user-content-fn-1-07e32f338f6c5bb09af1035a533348dd">
 <p>123<br>
-[教程]: <a href="https://www.runoob.com/markdown/md-link.html">https://www.runoob.com/markdown/md-link.html</a> <a href="#user-content-fnref-1-647d054f6f6aee2b1f340a6856e7501e" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+[教程]: <a href="https://www.runoob.com/markdown/md-link.html">https://www.runoob.com/markdown/md-link.html</a> <a href="#user-content-fnref-1-07e32f338f6c5bb09af1035a533348dd" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
 </li>
 </ol>
 </section></div>
@@ -429,8 +429,8 @@ File-Preferences-Settings</p>
 var now=new Date();
 document.getElementById("copyrightYear").innerHTML=now.getFullYear();
 
-if(""!=""){
-    var startSite=new Date("");
+if("08/17/2024"!=""){
+    var startSite=new Date("08/17/2024");
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
     document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
@@ -581,6 +581,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
-<script>MathJax = {tex: {inlineMath: [["$", "$"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src='https://blog.meekdai.com/Gmeek/plugins/articletoc.js'></script><script>MathJax = {tex: {inlineMath: [["$", "$"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </html>
