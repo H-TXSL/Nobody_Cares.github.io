@@ -1,4 +1,4 @@
-# Blog Title :link: https://H-TXSL.github.io/Nobody_Cares.github.io 
+# 博客 :link: https://H-TXSL.github.io/Nobody_Cares.github.io 
 ### :page_facing_up: [0](https://H-TXSL.github.io/Nobody_Cares.github.io/tag.html) 
 ### :speech_balloon: 0 
 ### :hibiscus: 0 
