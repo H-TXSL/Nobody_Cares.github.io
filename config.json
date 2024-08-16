@@ -1,6 +1,6 @@
 {
-    "title":"Blog Title",
-    "subTitle":"Blog description",
-    "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
+    "title":"Nobody_Cares", // 标题
+    "subTitle":"个人博客", // 描述
+    "avatarUrl":"https://s21.ax1x.com/2024/05/03/pkkvTNn.jpg", // 头像
     "GMEEK_VERSION":"last"
 }
