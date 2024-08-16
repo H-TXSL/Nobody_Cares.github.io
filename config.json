@@ -3,7 +3,7 @@
     "subTitle":"个人博客", 
     "avatarUrl":"https://avatars.githubusercontent.com/u/110390930?u=e650bc80688d9b64f5c5dd69d6cf9e822186493e&v=4",
     "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>",
-    "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/articletoc.js'></script>",
+    "script":"<script src='https://code.buxiantang.top/assets/articletoc.js'></script>",
     "startSite":"08/17/2024",
     "themeMode":"manual",
     "dayTheme":"dark",
