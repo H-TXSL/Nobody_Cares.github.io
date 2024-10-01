@@ -19,7 +19,7 @@
 
 - 配置`config.json`文件
   
-  ```
+  ```c++
   {
   'title':'Meekdai',  // 博客名
   'subTitle':'童话是一种生活态度，仅此而已。">
@@ -33,7 +33,7 @@
 
 - 配置`config.json`文件
   
-  ```
+  ```c++
   {
   'title':'Meekdai',  // 博客名
   'subTitle':'童话是一种生活态度，仅此而已。">
@@ -41,7 +41,7 @@
 <meta property="og:url" content="https://H-TXSL.github.io/Nobody_Cares.github.io/post/ge-ren-bo-ke-bu-shu.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/110390930?u=e650bc80688d9b64f5c5dd69d6cf9e822186493e&v=4">
 <title>个人博客部署</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -116,30 +116,29 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <ul>
 <li>
 <p>配置<code class="notranslate">config.json</code>文件</p>
-<pre class="notranslate"><code class="notranslate">{
-"title":"Meekdai",  // 博客名
-"subTitle":"童话是一种生活态度，仅此而已。", // 博客描述
-"avatarUrl":"https://github.githubassets.com/favicons/favicon.svg", // 头像
-"startSite":"08/17/2024", // 博客运行时长
+<div class="highlight highlight-source-c++"><pre class="notranslate">{
+<span class="pl-s"><span class="pl-pds">"</span>title<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Meekdai<span class="pl-pds">"</span></span>,  <span class="pl-c"><span class="pl-c">//</span> 博客名</span>
+<span class="pl-s"><span class="pl-pds">"</span>subTitle<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>童话是一种生活态度，仅此而已。<span class="pl-pds">"</span></span>, <span class="pl-c"><span class="pl-c">//</span> 博客描述</span>
+<span class="pl-s"><span class="pl-pds">"</span>avatarUrl<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>https://github.githubassets.com/favicons/favicon.svg<span class="pl-pds">"</span></span>, <span class="pl-c"><span class="pl-c">//</span> 头像</span>
+<span class="pl-s"><span class="pl-pds">"</span>startSite<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>08/17/2024<span class="pl-pds">"</span></span>, <span class="pl-c"><span class="pl-c">//</span> 博客运行时长</span>
 
-// 增加右上角按钮
-// 站内链接
-"singlePage":["about"], //使用方法:增加标签为about,并为文章设置标签
-// 站外链接,例如增添一个关于按钮
-"iconList":{"关于":"此处填写按钮的svg信息"}, // 定义图标svg
-"exlink":{"关于":"跳转链接"}, // 定义外部链接地址
-// "about"和"link"内置了svg图标信息,无需定义"iconList"
+<span class="pl-c"><span class="pl-c">//</span> 增加右上角按钮</span>
+<span class="pl-c"><span class="pl-c">//</span> 站内链接</span>
+<span class="pl-s"><span class="pl-pds">"</span>singlePage<span class="pl-pds">"</span></span>:[<span class="pl-s"><span class="pl-pds">"</span>about<span class="pl-pds">"</span></span>], <span class="pl-c"><span class="pl-c">//</span>使用方法:增加标签为about,并为文章设置标签</span>
+<span class="pl-c"><span class="pl-c">//</span> 站外链接,例如增添一个关于按钮</span>
+<span class="pl-s"><span class="pl-pds">"</span>iconList<span class="pl-pds">"</span></span>:{<span class="pl-s"><span class="pl-pds">"</span>关于<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>此处填写按钮的svg信息<span class="pl-pds">"</span></span>}, <span class="pl-c"><span class="pl-c">//</span> 定义图标svg</span>
+<span class="pl-s"><span class="pl-pds">"</span>exlink<span class="pl-pds">"</span></span>:{<span class="pl-s"><span class="pl-pds">"</span>关于<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>跳转链接<span class="pl-pds">"</span></span>}, <span class="pl-c"><span class="pl-c">//</span> 定义外部链接地址</span>
+<span class="pl-c"><span class="pl-c">//</span> "about"和"link"内置了svg图标信息,无需定义"iconList"</span>
 
-// 插件
-// Vercount网页计数器
-"allHead":"&lt;script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'&gt;&lt;/script&gt;",
-// Top目录
-"script":"&lt;script src='https://code.buxiantang.top/assets/articletoc.js'&gt;&lt;/script&gt;",
+<span class="pl-c"><span class="pl-c">//</span> 插件</span>
+<span class="pl-c"><span class="pl-c">//</span> Vercount网页计数器</span>
+<span class="pl-s"><span class="pl-pds">"</span>allHead<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>&lt;script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'&gt;&lt;/script&gt;<span class="pl-pds">"</span></span>,
+<span class="pl-c"><span class="pl-c">//</span> Top目录</span>
+<span class="pl-s"><span class="pl-pds">"</span>script<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>&lt;script src='https://code.buxiantang.top/assets/articletoc.js'&gt;&lt;/script&gt;<span class="pl-pds">"</span></span>,
 
-"needComment":1, //1 开启评论 0 关闭评论 (开启评论需要配置utterances)
-"GMEEK_VERSION":"last" // 版本号,无需修改
-}
-</code></pre>
+<span class="pl-s"><span class="pl-pds">"</span>needComment<span class="pl-pds">"</span></span>:<span class="pl-c1">1</span>, <span class="pl-c"><span class="pl-c">//</span>1 开启评论 0 关闭评论 (开启评论需要配置utterances)</span>
+<span class="pl-s"><span class="pl-pds">"</span>GMEEK_VERSION<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>last<span class="pl-pds">"</span></span> <span class="pl-c"><span class="pl-c">//</span> 版本号,无需修改</span>
+}</pre></div>
 <ul>
 <li>使用<code class="notranslate">iconList</code>自定义SVG图标必须是<code class="notranslate">16px</code>大小的，建议使用github的<code class="notranslate">Octicons</code>图标<br>
 Octicons图标链接：<a href="https://primer.style/foundations/icons/#16px" rel="nofollow">https://primer.style/foundations/icons/#16px</a></li>
