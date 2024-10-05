@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark-blue" data-light-theme="dark" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    <script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/110390930?u=e650bc80688d9b64f5c5dd69d6cf9e822186493e&v=4"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# Markdown语言
++ 提示: 适用与Github上的Markdown文本编辑
++ 在Github中的Markdown编辑器中,可以使用以下三种不同的语法在代码块中创建图表关系图：mermaid、geoJSON 和 topoJSON、ASCII STL.
+[关于图表关系图请在此处查询](https://docs.github.com/zh/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)
++ 在Github中的Markdown编辑器中支持LaTeX语法显示数学表达式.
+[关于LaTeX语法请在此处查询](https://docs.github.com/zh/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
+## 标题
+- 创建标题
+- 最大6个层次结构的标题
+```Markdown
+# 标题一
+## 标题二
+### 标题三
+......
+###### 标题六
+```
+# 标题一
+## 标题二
+### 标题三
+......
+###### 标题六
+***
+<a id='set1'></a>
+
+## 设置文本样式
+| 语法 | 例子 | 输出 | 
+| :--: | :--: | :--: |
+| ** **或者__ __ | `**粗体**` | **粗体** |
+| * *或者_ _ | `*斜体*` | *斜体* |
+| ~~ ~~ | `~~删除线~~` | ~~删除线~~ |
+| ** ** 和 * * | `**粗体*斜体*字**` | **粗体*斜体*字**(粗体嵌套斜体) |
+| * * 和 ** ** | `*斜体**粗体**字*` | *斜体**粗体**字*(斜体嵌套粗体) |
+| *** *** | `***全部粗体加斜体***` | ***全部粗体加斜体*** |
+| `<sub> </sub>` | 这是一个`<sub>下标</sub>` | 这是一个<sub>下标</sub> |
+| `<sup> </sup>` | 这是一个`<sup>上标</sup>` | 这是一个<sup>上标</sup> |
+## 引用文字
+- 引用的文本是缩进的,会具有不同字体颜色
+```Markdown
+这是一个引用文本
+> 这是一个引用文本
+>> 多重引用
+>>> ...
+```
+这是一个引用文本
+> 这是一个引用文本
+>> 多重引用
+>>> ....
+## 引用代码
+- 用多个反引号可以区分嵌套的代码 -> 在隔离代码块中显示三个反引号,用四个反引号包裹
+1. 单行引用 -> 由单个反引号连接首尾
+```Markdown
+这是一个`单行引用`.
+```
+这是一个`单行引用`.
+2. 多行引用 -> 由三个反引号连接首尾
+- 可以在代码块中增添语言标识符以启用语法高亮
+````Markdown
+以下为多行引用:
+```c++
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<'Hello World!'<<endl;
+    return 0;
+}
+```
+````
+以下为多行引用:
+
+```c++
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<'Hello World!'<<endl;
+    return 0;
+}
+```
+## 链接
+- 链接的文本是蓝色的,可以点击跳转
+```Markdown
+// 内联式链接 -> [链接文本](链接地址)
+[个人博客](https://h-txsl.github.io/Nobody_Cares.github.io/)
+// 引用式链接 -> [链接文本][链接标识符]
+// 在文档结尾处添加链接标识符
+// 链接标识符可以是任意字符串
+[个人博客][blog]
+
+[blog]: https://h-txsl.github.io/Nobody_Cares.github.io/
+```
+[个人博客](https://h-txsl.github.io/Nobody_Cares.github.io/)
+[个人博客][blog]
+- Markdown文档内部跳转
+```Markdown
+// 标题跳转
+// 跳转至设置文本样式
+[设置文本样式](#设置文本样式)
+
+// 自定义锚点跳转
+// 使用HTML的锚点标签<a>和id属性来实现文档内部跳转
+<a id='自定义标识'></a>
+// 跳转至设置文本样式
+
+[自定义锚点跳转](#set1)
+
+// 由于在设置文本样式处设置了锚点,所以可以直接跳转
+// <a id='set1'></a>
+```
+[设置文本样式](#设置文本样式)
+[自定义锚点跳转](#set1)
+- 图片链接
+>通过添加 ! 并 将 alt 文本用 [ ] 括起来，可显示图像。">
+<meta property="og:title" content="Markdown语法">
+<meta property="og:description" content="# Markdown语言
++ 提示: 适用与Github上的Markdown文本编辑
++ 在Github中的Markdown编辑器中,可以使用以下三种不同的语法在代码块中创建图表关系图：mermaid、geoJSON 和 topoJSON、ASCII STL.
+[关于图表关系图请在此处查询](https://docs.github.com/zh/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)
++ 在Github中的Markdown编辑器中支持LaTeX语法显示数学表达式.
+[关于LaTeX语法请在此处查询](https://docs.github.com/zh/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
+## 标题
+- 创建标题
+- 最大6个层次结构的标题
+```Markdown
+# 标题一
+## 标题二
+### 标题三
+......
+###### 标题六
+```
+# 标题一
+## 标题二
+### 标题三
+......
+###### 标题六
+***
+<a id='set1'></a>
+
+## 设置文本样式
+| 语法 | 例子 | 输出 | 
+| :--: | :--: | :--: |
+| ** **或者__ __ | `**粗体**` | **粗体** |
+| * *或者_ _ | `*斜体*` | *斜体* |
+| ~~ ~~ | `~~删除线~~` | ~~删除线~~ |
+| ** ** 和 * * | `**粗体*斜体*字**` | **粗体*斜体*字**(粗体嵌套斜体) |
+| * * 和 ** ** | `*斜体**粗体**字*` | *斜体**粗体**字*(斜体嵌套粗体) |
+| *** *** | `***全部粗体加斜体***` | ***全部粗体加斜体*** |
+| `<sub> </sub>` | 这是一个`<sub>下标</sub>` | 这是一个<sub>下标</sub> |
+| `<sup> </sup>` | 这是一个`<sup>上标</sup>` | 这是一个<sup>上标</sup> |
+## 引用文字
+- 引用的文本是缩进的,会具有不同字体颜色
+```Markdown
+这是一个引用文本
+> 这是一个引用文本
+>> 多重引用
+>>> ...
+```
+这是一个引用文本
+> 这是一个引用文本
+>> 多重引用
+>>> ....
+## 引用代码
+- 用多个反引号可以区分嵌套的代码 -> 在隔离代码块中显示三个反引号,用四个反引号包裹
+1. 单行引用 -> 由单个反引号连接首尾
+```Markdown
+这是一个`单行引用`.
+```
+这是一个`单行引用`.
+2. 多行引用 -> 由三个反引号连接首尾
+- 可以在代码块中增添语言标识符以启用语法高亮
+````Markdown
+以下为多行引用:
+```c++
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<'Hello World!'<<endl;
+    return 0;
+}
+```
+````
+以下为多行引用:
+
+```c++
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<'Hello World!'<<endl;
+    return 0;
+}
+```
+## 链接
+- 链接的文本是蓝色的,可以点击跳转
+```Markdown
+// 内联式链接 -> [链接文本](链接地址)
+[个人博客](https://h-txsl.github.io/Nobody_Cares.github.io/)
+// 引用式链接 -> [链接文本][链接标识符]
+// 在文档结尾处添加链接标识符
+// 链接标识符可以是任意字符串
+[个人博客][blog]
+
+[blog]: https://h-txsl.github.io/Nobody_Cares.github.io/
+```
+[个人博客](https://h-txsl.github.io/Nobody_Cares.github.io/)
+[个人博客][blog]
+- Markdown文档内部跳转
+```Markdown
+// 标题跳转
+// 跳转至设置文本样式
+[设置文本样式](#设置文本样式)
+
+// 自定义锚点跳转
+// 使用HTML的锚点标签<a>和id属性来实现文档内部跳转
+<a id='自定义标识'></a>
+// 跳转至设置文本样式
+
+[自定义锚点跳转](#set1)
+
+// 由于在设置文本样式处设置了锚点,所以可以直接跳转
+// <a id='set1'></a>
+```
+[设置文本样式](#设置文本样式)
+[自定义锚点跳转](#set1)
+- 图片链接
+>通过添加 ! 并 将 alt 文本用 [ ] 括起来，可显示图像。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://H-TXSL.github.io/Nobody_Cares.github.io/post/Markdown-yu-fa.html">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/110390930?u=e650bc80688d9b64f5c5dd69d6cf9e822186493e&v=4">
+<title>Markdown语法</title>
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+</style>
+<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}</style><style>.markdown-alert.markdown-alert-note {border-left-color:var(--borderColor-accent-emphasis, var(--color-accent-emphasis));background-color:var(--color-accent-subtle);}.markdown-alert.markdown-alert-note .markdown-alert-title {color: var(--fgColor-accent,var(--color-accent-fg));}</style><style>.markdown-alert.markdown-alert-tip {border-left-color:var(--borderColor-success-emphasis, var(--color-success-emphasis));background-color:var(--color-success-subtle);}.markdown-alert.markdown-alert-tip .markdown-alert-title {color: var(--fgColor-success,var(--color-success-fg));}</style><style>.markdown-alert.markdown-alert-important {border-left-color:var(--borderColor-done-emphasis, var(--color-done-emphasis));background-color:var(--color-done-subtle);}.markdown-alert.markdown-alert-important .markdown-alert-title {color: var(--fgColor-done,var(--color-done-fg));}</style><style>.markdown-alert.markdown-alert-warning {border-left-color:var(--borderColor-attention-emphasis, var(--color-attention-emphasis));background-color:var(--color-attention-subtle);}.markdown-alert.markdown-alert-warning .markdown-alert-title {color: var(--fgColor-attention,var(--color-attention-fg));}</style><style>.markdown-alert.markdown-alert-caution {border-left-color:var(--borderColor-danger-emphasis, var(--color-danger-emphasis));background-color:var(--color-danger-subtle);}.markdown-alert.markdown-alert-caution .markdown-alert-title {color: var(--fgColor-danger,var(--color-danger-fg));}</style>
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">Markdown语法</h1>
+<div class="title-right">
+    <a href="https://H-TXSL.github.io/Nobody_Cares.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/H-TXSL/Nobody_Cares.github.io/issues/5" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>Markdown语言</h1>
+<ul>
+<li>提示: 适用与Github上的Markdown文本编辑</li>
+<li>在Github中的Markdown编辑器中,可以使用以下三种不同的语法在代码块中创建图表关系图：mermaid、geoJSON 和 topoJSON、ASCII STL.<br>
+<a href="https://docs.github.com/zh/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams">关于图表关系图请在此处查询</a></li>
+<li>在Github中的Markdown编辑器中支持LaTeX语法显示数学表达式.<br>
+<a href="https://docs.github.com/zh/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions">关于LaTeX语法请在此处查询</a></li>
+</ul>
+<h2>标题</h2>
+<ul>
+<li>创建标题</li>
+<li>最大6个层次结构的标题</li>
+</ul>
+<div class="highlight highlight-text-md"><pre class="notranslate"><span class="pl-mh"># <span class="pl-en">标题一</span></span>
+<span class="pl-mh">## <span class="pl-en">标题二</span></span>
+<span class="pl-mh">### <span class="pl-en">标题三</span></span>
+......
+<span class="pl-mh">###### <span class="pl-en">标题六</span></span></pre></div>
+<h1>标题一</h1>
+<h2>标题二</h2>
+<h3>标题三</h3>
+<p>......</p>
+<h6>标题六</h6>
+<hr>
+<p><a id="user-content-set1"></a></p>
+<h2>设置文本样式</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th align="center">语法</th>
+<th align="center">例子</th>
+<th align="center">输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">** **或者__ __</td>
+<td align="center"><code class="notranslate">**粗体**</code></td>
+<td align="center"><strong>粗体</strong></td>
+</tr>
+<tr>
+<td align="center">* *或者_ _</td>
+<td align="center"><code class="notranslate">*斜体*</code></td>
+<td align="center"><em>斜体</em></td>
+</tr>
+<tr>
+<td align="center">~~ ~~</td>
+<td align="center"><code class="notranslate">~~删除线~~</code></td>
+<td align="center"><del>删除线</del></td>
+</tr>
+<tr>
+<td align="center">** ** 和 * *</td>
+<td align="center"><code class="notranslate">**粗体*斜体*字**</code></td>
+<td align="center"><strong>粗体<em>斜体</em>字</strong>(粗体嵌套斜体)</td>
+</tr>
+<tr>
+<td align="center">* * 和 ** **</td>
+<td align="center"><code class="notranslate">*斜体**粗体**字*</code></td>
+<td align="center"><em>斜体<strong>粗体</strong>字</em>(斜体嵌套粗体)</td>
+</tr>
+<tr>
+<td align="center">*** ***</td>
+<td align="center"><code class="notranslate">***全部粗体加斜体***</code></td>
+<td align="center"><em><strong>全部粗体加斜体</strong></em></td>
+</tr>
+<tr>
+<td align="center"><code class="notranslate">&lt;sub&gt; &lt;/sub&gt;</code></td>
+<td align="center">这是一个<code class="notranslate">&lt;sub&gt;下标&lt;/sub&gt;</code></td>
+<td align="center">这是一个<sub>下标</sub></td>
+</tr>
+<tr>
+<td align="center"><code class="notranslate">&lt;sup&gt; &lt;/sup&gt;</code></td>
+<td align="center">这是一个<code class="notranslate">&lt;sup&gt;上标&lt;/sup&gt;</code></td>
+<td align="center">这是一个<sup>上标</sup></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2>引用文字</h2>
+<ul>
+<li>引用的文本是缩进的,会具有不同字体颜色</li>
+</ul>
+<div class="highlight highlight-text-md"><pre class="notranslate">这是一个引用文本
+<span class="pl-ent"><span class="pl-ent">&gt; </span>这是一个引用文本</span>
+<span class="pl-ent"><span class="pl-ent">&gt;<span class="pl-ent">&gt; </span>多重引用</span></span>
+<span class="pl-ent"><span class="pl-ent">&gt;<span class="pl-ent">&gt;<span class="pl-ent">&gt; </span>...</span></span></span></pre></div>
+<p>这是一个引用文本</p>
+<blockquote>
+<p>这是一个引用文本</p>
+<blockquote>
+<p>多重引用</p>
+<blockquote>
+<p>....</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2>引用代码</h2>
+<ul>
+<li>用多个反引号可以区分嵌套的代码 -&gt; 在隔离代码块中显示三个反引号,用四个反引号包裹</li>
+</ul>
+<ol>
+<li>单行引用 -&gt; 由单个反引号连接首尾</li>
+</ol>
+<div class="highlight highlight-text-md"><pre class="notranslate">这是一个<span class="pl-s">`</span><span class="pl-c1">单行引用</span><span class="pl-s">`</span>.</pre></div>
+<p>这是一个<code class="notranslate">单行引用</code>.<br>
+2. 多行引用 -&gt; 由三个反引号连接首尾</p>
+<ul>
+<li>可以在代码块中增添语言标识符以启用语法高亮</li>
+</ul>
+<div class="highlight highlight-text-md"><pre class="notranslate">以下为多行引用:
+<span class="pl-s">```</span><span class="pl-en">c++</span>
+#<span class="pl-k">include</span><span class="pl-s"><span class="pl-pds">&lt;</span>iostream<span class="pl-pds">&gt;</span></span>
+<span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
+<span class="pl-k">int</span> <span class="pl-en">main</span>()
+{
+    <span class="pl-c1">cout&lt;&lt;"Hello World!"&lt;&lt;endl;</span>
+    <span class="pl-c1">return 0;</span>
+}
+<span class="pl-s">```</span></pre></div>
+<p>以下为多行引用:</p>
+<div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span><span class="pl-s"><span class="pl-pds">&lt;</span>iostream<span class="pl-pds">&gt;</span></span>
+<span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
+<span class="pl-k">int</span> <span class="pl-en">main</span>()
+{
+    cout&lt;&lt;<span class="pl-s"><span class="pl-pds">"</span>Hello World!<span class="pl-pds">"</span></span>&lt;&lt;endl;
+    <span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
+<h2>链接</h2>
+<ul>
+<li>链接的文本是蓝色的,可以点击跳转</li>
+</ul>
+<div class="highlight highlight-text-md"><pre class="notranslate">// 内联式链接 -&gt; <span class="pl-s">[</span>链接文本<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">链接地址</span><span class="pl-s">)</span>
+<span class="pl-s">[</span>个人博客<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://h-txsl.github.io/Nobody_Cares.github.io/</span><span class="pl-s">)</span>
+// 引用式链接 -&gt; <span class="pl-s">[</span>链接文本<span class="pl-s">]</span><span class="pl-s">[</span><span class="pl-en">链接标识符</span><span class="pl-s">]</span>
+// 在文档结尾处添加链接标识符
+// 链接标识符可以是任意字符串
+<span class="pl-s">[</span>个人博客<span class="pl-s">]</span><span class="pl-s">[</span><span class="pl-en">blog</span><span class="pl-s">]</span>
+
+<span class="pl-s">[</span><span class="pl-en">blog</span><span class="pl-s">]</span>: <span class="pl-corl">https://h-txsl.github.io/Nobody_Cares.github.io/</span></pre></div>
+<p><a href="https://h-txsl.github.io/Nobody_Cares.github.io/" rel="nofollow">个人博客</a><br>
+<a href="https://h-txsl.github.io/Nobody_Cares.github.io/" rel="nofollow">个人博客</a></p>
+<ul>
+<li>Markdown文档内部跳转</li>
+</ul>
+<div class="highlight highlight-text-md"><pre class="notranslate">// 标题跳转
+// 跳转至设置文本样式
+<span class="pl-s">[</span>设置文本样式<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">#设置文本样式</span><span class="pl-s">)</span>
+
+// 自定义锚点跳转
+// 使用HTML的锚点标签&lt;<span class="pl-ent">a</span>&gt;和id属性来实现文档内部跳转
+&lt;<span class="pl-ent">a</span> <span class="pl-e">id</span>=<span class="pl-s">"</span><span class="pl-s">自定义标识</span><span class="pl-s">"</span>&gt;&lt;/<span class="pl-ent">a</span>&gt;
+// 跳转至设置文本样式
+
+<span class="pl-s">[</span>自定义锚点跳转<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">#set1</span><span class="pl-s">)</span>
+
+// 由于在设置文本样式处设置了锚点,所以可以直接跳转
+// &lt;<span class="pl-ent">a</span> <span class="pl-e">id</span>=<span class="pl-s">"</span><span class="pl-s">set1</span><span class="pl-s">"</span>&gt;&lt;/<span class="pl-ent">a</span>&gt;</pre></div>
+<p><a href="#%E8%AE%BE%E7%BD%AE%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F">设置文本样式</a><br>
+<a href="#set1">自定义锚点跳转</a></p>
+<ul>
+<li>图片链接</li>
+</ul>
+<blockquote>
+<p>通过添加 ! 并 将 alt 文本用 [ ] 括起来，可显示图像。 替换文字是等效于图像中信息的短文本。 然后将图像的链接用括号 () 括起来。</p>
+</blockquote>
+<div class="highlight highlight-text-md"><pre class="notranslate"><span class="pl-s">![</span>头像<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://avatars.githubusercontent.com/u/110390930?u=e650bc80688d9b64f5c5dd69d6cf9e822186493e&amp;v=4</span><span class="pl-s">)</span></pre></div>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://avatars.githubusercontent.com/u/110390930?u=e650bc80688d9b64f5c5dd69d6cf9e822186493e&amp;v=4"><img src="https://avatars.githubusercontent.com/u/110390930?u=e650bc80688d9b64f5c5dd69d6cf9e822186493e&amp;v=4" alt="头像" style="max-width: 100%;"></a></p>
+<h2>列表</h2>
+<ul>
+<li>无序列表</li>
+</ul>
+<div class="highlight highlight-text-md"><pre class="notranslate">// 无序列表使用-或+或<span class="pl-s">*</span>作为列表标记
+<span class="pl-v">-</span> 列表项一
+
+// 有序列表使用数字和.作为列表标记
+<span class="pl-s">1</span><span class="pl-v">.</span> 列表项一
+<span class="pl-s">2</span><span class="pl-v">.</span> 列表项二
+<span class="pl-s">3</span><span class="pl-v">.</span> 列表项三
+// 列表可以嵌套
+
+// 任务列表
+<span class="pl-v">-</span> <span class="pl-k">[x]</span> 已完成任务
+<span class="pl-v">-</span> <span class="pl-k">[ ]</span> 未完成任务
+</pre></div>
+<ul>
+<li>列表项一</li>
+</ul>
+<ol>
+<li>列表项一</li>
+<li>列表项二</li>
+<li>列表项三</li>
+</ol>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 已完成任务</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> 未完成任务</li>
+</ul>
+<h2>脚注</h2>
+<ul>
+<li>脚注是对文本的补充说明</li>
+</ul>
+<blockquote>
+<p>Markdown 中脚注的位置不会影响该脚注的呈现位置。 您可以在引用脚注后立即写脚注，脚注仍将呈现在 Markdown 的底部</p>
+</blockquote>
+<div class="highlight highlight-text-md"><pre class="notranslate">这是一段文本<span class="pl-s">[</span><span class="pl-s">^</span><span class="pl-en">1</span><span class="pl-s">]</span>
+<span class="pl-s">[</span><span class="pl-s">^</span><span class="pl-en">1</span><span class="pl-s">]</span>: 这是一段脚注</pre></div>
+<p>这是一段文本<sup><a href="#user-content-fn-1-80c9f9c0c9c8694ac40575a2d1407102" id="user-content-fnref-1-80c9f9c0c9c8694ac40575a2d1407102" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup></p>
+<h2>表格</h2>
+<ul>
+<li>表格两端的管道是可选的</li>
+</ul>
+<div class="highlight highlight-text-md"><pre class="notranslate">// 使用|来分隔列
+// 使用:来设置对齐方式
+<span class="pl-ml">|</span> 左对齐 <span class="pl-ml">|</span> 居中对齐 <span class="pl-ml">|</span> 右对齐 <span class="pl-ml">|</span>
+<span class="pl-ml">|</span> :-- <span class="pl-ml">|</span> :--: <span class="pl-ml">|</span> --: <span class="pl-ml">|</span>
+<span class="pl-ml">|</span> 表头一 <span class="pl-ml">|</span> 表头二 <span class="pl-ml">|</span> 表头三 <span class="pl-ml">|</span>
+<span class="pl-ml">|</span> 内容一 <span class="pl-ml">|</span> 内容二 <span class="pl-ml">|</span> 内容三三三 <span class="pl-ml">|</span>
+<span class="pl-ml">|</span> 内 <span class="pl-ml">|</span> 内容五五五五五 <span class="pl-ml">|</span> 内容六六六六 <span class="pl-ml">|</span></pre></div>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th align="left">左对齐</th>
+<th align="center">居中对齐</th>
+<th align="right">右对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">表头一</td>
+<td align="center">表头二</td>
+<td align="right">表头三</td>
+</tr>
+<tr>
+<td align="left">内容一</td>
+<td align="center">内容二</td>
+<td align="right">内容三三三</td>
+</tr>
+<tr>
+<td align="left">内</td>
+<td align="center">内容五五五五五</td>
+<td align="right">内容六六六六</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2>警报信息</h2>
+<ul>
+<li>在 GitHub 上，它们以独特的颜色和图标显示，以指示内容的显著性</li>
+<li>警报无法嵌套在其他元素中</li>
+</ul>
+<div class="highlight highlight-text-md"><pre class="notranslate"><span class="pl-ent"><span class="pl-ent">&gt; </span><span class="pl-s">[</span>!NOTE<span class="pl-s">]</span></span>
+<span class="pl-ent"><span class="pl-ent">&gt; </span>Useful information that users should know, even when skimming content.</span>
+<span class="pl-ent"></span>
+<span class="pl-ent"><span class="pl-ent">&gt; </span><span class="pl-s">[</span>!TIP<span class="pl-s">]</span></span>
+<span class="pl-ent"><span class="pl-ent">&gt; </span>Helpful advice for doing things better or more easily.</span>
+<span class="pl-ent"></span>
+<span class="pl-ent"><span class="pl-ent">&gt; </span><span class="pl-s">[</span>!IMPORTANT<span class="pl-s">]</span></span>
+<span class="pl-ent"><span class="pl-ent">&gt; </span>Key information users need to know to achieve their goal.</span>
+<span class="pl-ent"></span>
+<span class="pl-ent"><span class="pl-ent">&gt; </span><span class="pl-s">[</span>!WARNING<span class="pl-s">]</span></span>
+<span class="pl-ent"><span class="pl-ent">&gt; </span>Urgent info that needs immediate user attention to avoid problems.</span>
+<span class="pl-ent"></span>
+<span class="pl-ent"><span class="pl-ent">&gt; </span><span class="pl-s">[</span>!CAUTION<span class="pl-s">]</span></span>
+<span class="pl-ent"><span class="pl-ent">&gt; </span>Advises about risks or negative outcomes of certain actions.</span></pre></div>
+<p>以下为呈现的警报:</p>
+<div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p><p>Useful information that users should know, even when skimming content.</p>
+</div>
+<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>Helpful advice for doing things better or more easily.</p>
+</div>
+<div class="markdown-alert markdown-alert-important"><p class="markdown-alert-title"><svg class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p><p>Key information users need to know to achieve their goal.</p>
+</div>
+<div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Warning</p><p>Urgent info that needs immediate user attention to avoid problems.</p>
+</div>
+<div class="markdown-alert markdown-alert-caution"><p class="markdown-alert-title"><svg class="octicon octicon-stop mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Caution</p><p>Advises about risks or negative outcomes of certain actions.</p>
+</div>
+<h2>创建折叠信息</h2>
+<ul>
+<li>折叠信息可以折叠显示</li>
+<li>注意空格的使用</li>
+</ul>
+<div class="highlight highlight-text-md"><pre class="notranslate">&lt;<span class="pl-ent">details</span>&gt;
+&lt;<span class="pl-ent">summary</span>&gt;折叠信息&lt;/<span class="pl-ent">summary</span>&gt;
+
+这是一段折叠信息
+
+<span class="pl-s">```</span><span class="pl-en">c++</span>
+#<span class="pl-k">include</span><span class="pl-s"><span class="pl-pds">&lt;</span>iostream<span class="pl-pds">&gt;</span></span>
+<span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
+<span class="pl-k">int</span> <span class="pl-en">main</span>()
+{
+    <span class="pl-c1">cout&lt;&lt;"Hello World!"</span>
+    <span class="pl-c1">return 0;</span>
+}
+<span class="pl-s">```</span>
+
+&lt;/<span class="pl-ent">details</span>&gt;</pre></div>
+<details>
+<summary>折叠信息</summary>
+<p>这是一段折叠信息</p>
+<div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span><span class="pl-s"><span class="pl-pds">&lt;</span>iostream<span class="pl-pds">&gt;</span></span>
+<span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
+<span class="pl-k">int</span> <span class="pl-en">main</span>()
+{
+    cout&lt;&lt;<span class="pl-s"><span class="pl-pds">"</span>Hello World!<span class="pl-pds">"</span></span>
+    <span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
+</details>
+<div class="markdown-alert markdown-alert-caution"><p class="markdown-alert-title"><svg class="octicon octicon-stop mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Caution</p><p>此适用于GitHub的Markdown语法文档不完整<br>
+更多的语法请参考<a href="https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">官方文档</a></p>
+</div>
+<section data-footnotes="" class="footnotes"><h2 id="footnote-label" class="sr-only">Footnotes</h2>
+<ol>
+<li id="user-content-fn-1-80c9f9c0c9c8694ac40575a2d1407102">
+<p>这是一段脚注 <a href="#user-content-fnref-1-80c9f9c0c9c8694ac40575a2d1407102" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://H-TXSL.github.io/Nobody_Cares.github.io">Nobody_Cares</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if("08/17/2024"!=""){
+    var startSite=new Date("08/17/2024");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","H-TXSL/Nobody_Cares.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
+
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
+
+</script>
+<script src='https://code.buxiantang.top/assets/articletoc.js'></script>
+
+</html>
