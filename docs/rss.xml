@@ -1,5 +1,24 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Nobody_Cares</title><link>https://H-TXSL.github.io/Nobody_Cares.github.io</link><description>个人博客</description><copyright>Nobody_Cares</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/110390930?u=e650bc80688d9b64f5c5dd69d6cf9e822186493e&amp;v=4</url><title>avatar</title><link>https://H-TXSL.github.io/Nobody_Cares.github.io</link></image><lastBuildDate>Sat, 05 Oct 2024 16:30:30 +0000</lastBuildDate><managingEditor>Nobody_Cares</managingEditor><ttl>60</ttl><webMaster>Nobody_Cares</webMaster><item><title>Markdown语法</title><link>https://H-TXSL.github.io/Nobody_Cares.github.io/post/Markdown-yu-fa.html</link><description># Markdown语言&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Nobody_Cares</title><link>https://H-TXSL.github.io/Nobody_Cares.github.io</link><description>个人博客</description><copyright>Nobody_Cares</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/110390930?u=e650bc80688d9b64f5c5dd69d6cf9e822186493e&amp;v=4</url><title>avatar</title><link>https://H-TXSL.github.io/Nobody_Cares.github.io</link></image><lastBuildDate>Sat, 26 Oct 2024 19:56:03 +0000</lastBuildDate><managingEditor>Nobody_Cares</managingEditor><ttl>60</ttl><webMaster>Nobody_Cares</webMaster><item><title>C++文件操作</title><link>https://H-TXSL.github.io/Nobody_Cares.github.io/post/C%2B%2B-wen-jian-cao-zuo.html</link><description>+ 所需头文件`#include &lt;fstream&gt;`&#13;
+&#13;
+&gt; 包含 fstream 类, ifstream 类, ofstream 类.  &#13;
+fstream 读写&#13;
+&gt;&#13;
+&gt; ifstream 读&#13;
+&gt;&#13;
+&gt; ofstream 写&#13;
+&gt;&#13;
+&#13;
+&#13;
+&#13;
+## 打开文件,没有此文件,则创建并打开&#13;
+函数原型 `void open(const char* filename, ios_base::openmode mode);`&#13;
+&#13;
+filename 文件名	mode 打开模式&#13;
+&#13;
+&gt; 常见的打开模式&#13;
+&gt;&#13;
+&gt; std::ios::in：以只读模式打开文件。</description><guid isPermaLink="true">https://H-TXSL.github.io/Nobody_Cares.github.io/post/C%2B%2B-wen-jian-cao-zuo.html</guid><pubDate>Sat, 26 Oct 2024 19:54:09 +0000</pubDate></item><item><title>Markdown语法</title><link>https://H-TXSL.github.io/Nobody_Cares.github.io/post/Markdown-yu-fa.html</link><description># Markdown语言&#13;
 + 提示: 适用与Github上的Markdown文本编辑&#13;
 + 在Github中的Markdown编辑器中,可以使用以下三种不同的语法在代码块中创建图表关系图：mermaid、geoJSON 和 topoJSON、ASCII STL.&#13;
 [关于图表关系图请在此处查询](https://docs.github.com/zh/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)&#13;
