@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Nobody_Cares</title><link>https://H-TXSL.github.io/Nobody_Cares.github.io</link><description>个人博客</description><copyright>Nobody_Cares</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/110390930?u=e650bc80688d9b64f5c5dd69d6cf9e822186493e&amp;v=4</url><title>avatar</title><link>https://H-TXSL.github.io/Nobody_Cares.github.io</link></image><lastBuildDate>Sat, 02 Nov 2024 14:51:19 +0000</lastBuildDate><managingEditor>Nobody_Cares</managingEditor><ttl>60</ttl><webMaster>Nobody_Cares</webMaster><item><title>从零开始的STL生活</title><link>https://H-TXSL.github.io/Nobody_Cares.github.io/post/cong-ling-kai-shi-de-STL-sheng-huo.html</link><description># 从零开始的STL生活&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Nobody_Cares</title><link>https://H-TXSL.github.io/Nobody_Cares.github.io</link><description>个人博客</description><copyright>Nobody_Cares</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/110390930?u=e650bc80688d9b64f5c5dd69d6cf9e822186493e&amp;v=4</url><title>avatar</title><link>https://H-TXSL.github.io/Nobody_Cares.github.io</link></image><lastBuildDate>Sat, 02 Nov 2024 14:59:31 +0000</lastBuildDate><managingEditor>Nobody_Cares</managingEditor><ttl>60</ttl><webMaster>Nobody_Cares</webMaster><item><title>从零开始的STL生活</title><link>https://H-TXSL.github.io/Nobody_Cares.github.io/post/cong-ling-kai-shi-de-STL-sheng-huo.html</link><description># 从零开始的STL生活&#13;
 &gt; 参考[cppreference](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)&#13;
 # 目录&#13;
 &gt; - 序列&#13;
@@ -30,8 +30,8 @@
 &gt; [std::swap(std::array) 特化 std::swap 算法](#user-content-arr13)&#13;
 &gt; [std::to_array 从内建数组创建 std::array 对象](#user-content-arr14)&#13;
 &gt; - 辅助类&#13;
-&gt; [std::tuple_size&lt;std::array&gt;](#user-content-arr15)&#13;
-&gt; [std::tuple_element&lt;std::array&gt;](#user-content-arr16)&#13;
+&gt; [std::tuple_size\&lt;std::array&gt;](#user-content-arr15)&#13;
+&gt; [std::tuple_element\&lt;std::array&gt;](#user-content-arr16)&#13;
 ***&#13;
 - 成员访问&#13;
 &lt;a name='arr1'&gt;&lt;/a&gt;&#13;

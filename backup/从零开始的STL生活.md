@@ -29,8 +29,8 @@
 > [std::swap(std::array) 特化 std::swap 算法](#user-content-arr13)
 > [std::to_array 从内建数组创建 std::array 对象](#user-content-arr14)
 > - 辅助类
-> [std::tuple_size<std::array>](#user-content-arr15)
-> [std::tuple_element<std::array>](#user-content-arr16)
+> [std::tuple_size\<std::array>](#user-content-arr15)
+> [std::tuple_element\<std::array>](#user-content-arr16)
 ***
 - 成员访问
 <a name="arr1"></a>
