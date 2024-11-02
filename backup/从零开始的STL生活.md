@@ -33,7 +33,7 @@
 > [std::tuple_element\<std::array>](#arr16)
 ***
 - 成员访问
-<a id="arr1"></a>
+<a name="arr1"></a>
 at 带越界访问检查
 ```c++
 std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
@@ -48,7 +48,7 @@ std::cout << arr.at(1) << std::endl; // 输出 10
     std::cout << ex.what() << std::endl; 
   }
 ```
-<a id="arr2"></a>
+<a name="arr2"></a>
 operator[] 访问指定元素, 无边界检查
 ```c++
 std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
@@ -58,7 +58,7 @@ arr[1] = 10;
 std::cout << arr[1] << std::endl; // 输出 10
 ```
 
-<a id="arr3"></a>
+<a name="arr3"></a>
 front 访问第一个元素
 ```c++
 std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
@@ -66,7 +66,7 @@ std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
 std::cout << arr.front() << std::endl; // 输出 1
 ```
 
-<a id="arr4"></a>
+<a name="arr4"></a>
 back 访问最后一个元素
 ```c++
 std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
@@ -74,7 +74,7 @@ std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
 std::cout << arr.back() << std::endl; // 输出 6
 ```
 
-<a id="arr5"></a>
+<a name="arr5"></a>
 data 直接访问底层连续存储
 ```c++
 std::array<int, 5> arr{1, 2, 3, 4, 5};
@@ -88,7 +88,7 @@ std::array<int, 5> arr{1, 2, 3, 4, 5};
   std::cout << std::endl;
 ```
 - 迭代器
-<a id="arr6"></a>
+<a name="arr6"></a>
 begin 指向起始位置的迭代器 
 end 指向末元素后一个位置的迭代器
 rbegin 指向末元素的迭代器
@@ -112,7 +112,7 @@ rend 指向头元素前一个位置的迭代器
   std::cout << std::endl;
 ```
 - 容量
-<a id="arr7"></a>
+<a name="arr7"></a>
 empty 检查容器是否为空
 ```c++
   std::array<int, 5> arr{1, 2, 3, 4, 5};
@@ -120,14 +120,14 @@ empty 检查容器是否为空
   std::cout << std::boolalpha << "arr.empty() : " << arr.empty() << std::endl;
   // arr.empty() : false
 ```
-<a id="arr8"></a>
+<a name="arr8"></a>
 size 返回元素数
 ```c++
   std::array<int, 5> arr{1, 2, 3, 4, 5};
   std::cout << "arr.size() : " << arr.size() << std::endl;
   // arr.size() : 5
 ```
-<a id="arr9"></a>
+<a name="arr9"></a>
 max_size 返回可容纳的最大元素数
 ```c++
   std::array<int, 5> arr{1, 2, 3, 4, 5};
@@ -136,7 +136,7 @@ max_size 返回可容纳的最大元素数
   // arr.max_size() : 5
 ```
 - 操作
-<a id="arr10"></a>
+<a name="arr10"></a>
 fill 以指定值填充容器
 ```c++
   std::array<int, 5> arr{1, 2, 3, 4, 5};
@@ -148,7 +148,7 @@ fill 以指定值填充容器
   }
   std::cout << std::endl;
 ```
-<a it="arr11"></a>
+<a name="arr11"></a>
 swap 交换内容
 ```c++
   std::array<int, 5> arr1{1, 2, 3, 4, 5};
@@ -168,7 +168,7 @@ swap 交换内容
   std::cout << std::endl;
 ```
 - 非成员函数
-<a id="arr12"></a>
+<a name="arr12"></a>
 get(std::array) 访问array的一个元素
 ```c++
   std::array<int, 5> arr{1, 2, 3, 4, 5};
@@ -178,7 +178,7 @@ get(std::array) 访问array的一个元素
   // 访问值
   std::cout << std::get<0>(arr) << std::endl; // 10
 ```
-<a id="arr13"></a>
+<a name="arr13"></a>
 std::swap(std::array) 特化std::swap算法
 ```c++
   std::array<int, 5> arr1{1, 2, 3, 4, 5};
@@ -197,11 +197,11 @@ std::swap(std::array) 特化std::swap算法
   }
   std::cout << std::endl;
 ```
-<a id="arr14"></a>
+<a name="arr14"></a>
 to_array 从内建数组创建std::array对象
 `C++20支持`
 - 辅助类
-<a id="arr15"></a>
+<a name="arr15"></a>
 std::tuple_size\<std::array> 提供作为编译时常量表达式访问 std::array 中元素数量的方法
-<a id="arr16"></a>
+<a name="arr16"></a>
 std::tuple_element\<std::array> 使用 tuple 式接口，提供 array 元素类型的编译时索引访问

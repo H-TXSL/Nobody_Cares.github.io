@@ -45,7 +45,7 @@
 > [std::tuple_element\<std::array>](#arr16)
 ***
 - 成员访问
-<a id='arr1'></a>
+<a name='arr1'></a>
 at 带越界访问检查
 ```c++
 std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
@@ -60,7 +60,7 @@ std::cout << arr.at(1) << std::endl; // 输出 10
     std::cout << ex.what() << std::endl; 
   }
 ```
-<a id='arr2'></a>
+<a name='arr2'></a>
 operator[] 访问指定元素, 无边界检查
 ```c++
 std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
@@ -70,7 +70,7 @@ arr[1] = 10;
 std::cout << arr[1] << std::endl; // 输出 10
 ```
 
-<a id='arr3'></a>
+<a name='arr3'></a>
 front 访问第一个元素
 ```c++
 std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
@@ -78,7 +78,7 @@ std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
 std::cout << arr.front() << std::endl; // 输出 1
 ```
 
-<a id='arr4'></a>
+<a name='arr4'></a>
 back 访问最后一个元素
 ```c++
 std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
@@ -86,7 +86,7 @@ std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
 std::cout << arr.back() << std::endl; // 输出 6
 ```
 
-<a id='arr5'></a>
+<a name='arr5'></a>
 data 直接访问底层连续存储
 ```c++
 std::array<int, 5> arr{1, 2, 3, 4, 5};
@@ -100,7 +100,7 @@ std::array<int, 5> arr{1, 2, 3, 4, 5};
   std::cout << std::endl;
 ```
 - 迭代器
-<a id='arr6'></a>
+<a name='arr6'></a>
 begin 指向起始位置的迭代器 
 end 指向末元素后一个位置的迭代器
 rbegin 指向末元素的迭代器
@@ -124,7 +124,7 @@ rend 指向头元素前一个位置的迭代器
   std::cout << std::endl;
 ```
 - 容量
-<a id='arr7'></a>
+<a name='arr7'></a>
 empty 检查容器是否为空
 ```c++
   std::array<int, 5> arr{1, 2, 3, 4, 5};
@@ -132,14 +132,14 @@ empty 检查容器是否为空
   std::cout << std::boolalpha << 'arr.empty() : ' << arr.empty() << std::endl;
   // arr.empty() : false
 ```
-<a id='arr8'></a>
+<a name='arr8'></a>
 size 返回元素数
 ```c++
   std::array<int, 5> arr{1, 2, 3, 4, 5};
   std::cout << 'arr.size() : ' << arr.size() << std::endl;
   // arr.size() : 5
 ```
-<a id='arr9'></a>
+<a name='arr9'></a>
 max_size 返回可容纳的最大元素数
 ```c++
   std::array<int, 5> arr{1, 2, 3, 4, 5};
@@ -180,7 +180,7 @@ max_size 返回可容纳的最大元素数
 > [std::tuple_element\<std::array>](#arr16)
 ***
 - 成员访问
-<a id='arr1'></a>
+<a name='arr1'></a>
 at 带越界访问检查
 ```c++
 std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
@@ -195,7 +195,7 @@ std::cout << arr.at(1) << std::endl; // 输出 10
     std::cout << ex.what() << std::endl; 
   }
 ```
-<a id='arr2'></a>
+<a name='arr2'></a>
 operator[] 访问指定元素, 无边界检查
 ```c++
 std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
@@ -205,7 +205,7 @@ arr[1] = 10;
 std::cout << arr[1] << std::endl; // 输出 10
 ```
 
-<a id='arr3'></a>
+<a name='arr3'></a>
 front 访问第一个元素
 ```c++
 std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
@@ -213,7 +213,7 @@ std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
 std::cout << arr.front() << std::endl; // 输出 1
 ```
 
-<a id='arr4'></a>
+<a name='arr4'></a>
 back 访问最后一个元素
 ```c++
 std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
@@ -221,7 +221,7 @@ std::array<int, 6> arr{1, 2, 3, 4, 5, 6};
 std::cout << arr.back() << std::endl; // 输出 6
 ```
 
-<a id='arr5'></a>
+<a name='arr5'></a>
 data 直接访问底层连续存储
 ```c++
 std::array<int, 5> arr{1, 2, 3, 4, 5};
@@ -235,7 +235,7 @@ std::array<int, 5> arr{1, 2, 3, 4, 5};
   std::cout << std::endl;
 ```
 - 迭代器
-<a id='arr6'></a>
+<a name='arr6'></a>
 begin 指向起始位置的迭代器 
 end 指向末元素后一个位置的迭代器
 rbegin 指向末元素的迭代器
@@ -259,7 +259,7 @@ rend 指向头元素前一个位置的迭代器
   std::cout << std::endl;
 ```
 - 容量
-<a id='arr7'></a>
+<a name='arr7'></a>
 empty 检查容器是否为空
 ```c++
   std::array<int, 5> arr{1, 2, 3, 4, 5};
@@ -267,14 +267,14 @@ empty 检查容器是否为空
   std::cout << std::boolalpha << 'arr.empty() : ' << arr.empty() << std::endl;
   // arr.empty() : false
 ```
-<a id='arr8'></a>
+<a name='arr8'></a>
 size 返回元素数
 ```c++
   std::array<int, 5> arr{1, 2, 3, 4, 5};
   std::cout << 'arr.size() : ' << arr.size() << std::endl;
   // arr.size() : 5
 ```
-<a id='arr9'></a>
+<a name='arr9'></a>
 max_size 返回可容纳的最大元素数
 ```c++
   std::array<int, 5> arr{1, 2, 3, 4, 5};
@@ -400,7 +400,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <hr>
 <ul>
 <li>成员访问<br>
-<a id="user-content-arr1"></a><br>
+<a name="user-content-arr1"></a><br>
 at 带越界访问检查</li>
 </ul>
 <div class="highlight highlight-source-c++"><pre class="notranslate">std::array&lt;<span class="pl-k">int</span>, <span class="pl-c1">6</span>&gt; arr{<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>, <span class="pl-c1">5</span>, <span class="pl-c1">6</span>};
@@ -414,24 +414,24 @@ std::cout &lt;&lt; arr.at(<span class="pl-c1">1</span>) &lt;&lt; std::endl; <spa
   } <span class="pl-k">catch</span> (<span class="pl-k">const</span> std::out_of_range&amp; ex) {
     std::cout &lt;&lt; ex.<span class="pl-c1">what</span>() &lt;&lt; std::endl; 
   }</pre></div>
-<p><a id="user-content-arr2"></a><br>
+<p><a name="user-content-arr2"></a><br>
 operator[] 访问指定元素, 无边界检查</p>
 <div class="highlight highlight-source-c++"><pre class="notranslate">std::array&lt;<span class="pl-k">int</span>, <span class="pl-c1">6</span>&gt; arr{<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>, <span class="pl-c1">5</span>, <span class="pl-c1">6</span>};
 <span class="pl-c"><span class="pl-c">//</span> 设置元素</span>
 arr[<span class="pl-c1">1</span>] = <span class="pl-c1">10</span>;
 <span class="pl-c"><span class="pl-c">//</span> 访问元素</span>
 std::cout &lt;&lt; arr[<span class="pl-c1">1</span>] &lt;&lt; std::endl; <span class="pl-c"><span class="pl-c">//</span> 输出 10</span></pre></div>
-<p><a id="user-content-arr3"></a><br>
+<p><a name="user-content-arr3"></a><br>
 front 访问第一个元素</p>
 <div class="highlight highlight-source-c++"><pre class="notranslate">std::array&lt;<span class="pl-k">int</span>, <span class="pl-c1">6</span>&gt; arr{<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>, <span class="pl-c1">5</span>, <span class="pl-c1">6</span>};
 <span class="pl-c"><span class="pl-c">//</span> 访问第一个元素</span>
 std::cout &lt;&lt; arr.front() &lt;&lt; std::endl; <span class="pl-c"><span class="pl-c">//</span> 输出 1</span></pre></div>
-<p><a id="user-content-arr4"></a><br>
+<p><a name="user-content-arr4"></a><br>
 back 访问最后一个元素</p>
 <div class="highlight highlight-source-c++"><pre class="notranslate">std::array&lt;<span class="pl-k">int</span>, <span class="pl-c1">6</span>&gt; arr{<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>, <span class="pl-c1">5</span>, <span class="pl-c1">6</span>};
 <span class="pl-c"><span class="pl-c">//</span> 访问最后一个元素</span>
 std::cout &lt;&lt; arr.back() &lt;&lt; std::endl; <span class="pl-c"><span class="pl-c">//</span> 输出 6</span></pre></div>
-<p><a id="user-content-arr5"></a><br>
+<p><a name="user-content-arr5"></a><br>
 data 直接访问底层连续存储</p>
 <div class="highlight highlight-source-c++"><pre class="notranslate">std::array&lt;<span class="pl-k">int</span>, <span class="pl-c1">5</span>&gt; arr{<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>, <span class="pl-c1">5</span>};
 <span class="pl-c"><span class="pl-c">//</span> 返回一个指向底层连续存储的指针</span>
@@ -444,7 +444,7 @@ data 直接访问底层连续存储</p>
   std::cout &lt;&lt; std::endl;</pre></div>
 <ul>
 <li>迭代器<br>
-<a id="user-content-arr6"></a><br>
+<a name="user-content-arr6"></a><br>
 begin 指向起始位置的迭代器<br>
 end 指向末元素后一个位置的迭代器<br>
 rbegin 指向末元素的迭代器<br>
@@ -470,19 +470,19 @@ rend 指向头元素前一个位置的迭代器</li>
   std::cout &lt;&lt; std::endl;</pre></div>
 <ul>
 <li>容量<br>
-<a id="user-content-arr7"></a><br>
+<a name="user-content-arr7"></a><br>
 empty 检查容器是否为空</li>
 </ul>
 <div class="highlight highlight-source-c++"><pre class="notranslate">  std::array&lt;<span class="pl-k">int</span>, <span class="pl-c1">5</span>&gt; arr{<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>, <span class="pl-c1">5</span>};
   若容器为空则为 <span class="pl-c1">true</span>，否则为 <span class="pl-c1">false</span>
   std::cout &lt;&lt; std::boolalpha &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>arr.empty() : <span class="pl-pds">"</span></span> &lt;&lt; arr.empty() &lt;&lt; std::endl;
   <span class="pl-c"><span class="pl-c">//</span> arr.empty() : false</span></pre></div>
-<p><a id="user-content-arr8"></a><br>
+<p><a name="user-content-arr8"></a><br>
 size 返回元素数</p>
 <div class="highlight highlight-source-c++"><pre class="notranslate">  std::array&lt;<span class="pl-k">int</span>, <span class="pl-c1">5</span>&gt; arr{<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>, <span class="pl-c1">5</span>};
   std::cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>arr.size() : <span class="pl-pds">"</span></span> &lt;&lt; arr.size() &lt;&lt; std::endl;
   <span class="pl-c"><span class="pl-c">//</span> arr.size() : 5</span></pre></div>
-<p><a id="user-content-arr9"></a><br>
+<p><a name="user-content-arr9"></a><br>
 max_size 返回可容纳的最大元素数</p>
 <div class="highlight highlight-source-c++"><pre class="notranslate">  std::array&lt;<span class="pl-k">int</span>, <span class="pl-c1">5</span>&gt; arr{<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>, <span class="pl-c1">5</span>};
   <span class="pl-c"><span class="pl-c">//</span> 因为每个 std::array&lt;T, N&gt; 都是固定大小容器，故 max_size 返回的值等于 N（亦为 size() 所返回的值）。</span>
@@ -490,7 +490,7 @@ max_size 返回可容纳的最大元素数</p>
   <span class="pl-c"><span class="pl-c">//</span> arr.max_size() : 5</span></pre></div>
 <ul>
 <li>操作<br>
-<a id="user-content-arr10"></a><br>
+<a name="user-content-arr10"></a><br>
 fill 以指定值填充容器</li>
 </ul>
 <div class="highlight highlight-source-c++"><pre class="notranslate">  std::array&lt;<span class="pl-k">int</span>, <span class="pl-c1">5</span>&gt; arr{<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>, <span class="pl-c1">5</span>};
@@ -501,7 +501,7 @@ fill 以指定值填充容器</li>
     <span class="pl-c"><span class="pl-c">//</span> 10 10 10 10 10</span>
   }
   std::cout &lt;&lt; std::endl;</pre></div>
-<p><br>
+<p><a name="user-content-arr11"></a><br>
 swap 交换内容</p>
 <div class="highlight highlight-source-c++"><pre class="notranslate">  std::array&lt;<span class="pl-k">int</span>, <span class="pl-c1">5</span>&gt; arr1{<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>, <span class="pl-c1">5</span>};
   std::array&lt;<span class="pl-k">int</span>, <span class="pl-c1">5</span>&gt; arr2{<span class="pl-c1">10</span>, <span class="pl-c1">20</span>, <span class="pl-c1">30</span>, <span class="pl-c1">40</span>, <span class="pl-c1">50</span>};
@@ -520,7 +520,7 @@ swap 交换内容</p>
   std::cout &lt;&lt; std::endl;</pre></div>
 <ul>
 <li>非成员函数<br>
-<a id="user-content-arr12"></a><br>
+<a name="user-content-arr12"></a><br>
 get(std::array) 访问array的一个元素</li>
 </ul>
 <div class="highlight highlight-source-c++"><pre class="notranslate">  std::array&lt;<span class="pl-k">int</span>, <span class="pl-c1">5</span>&gt; arr{<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>, <span class="pl-c1">5</span>};
@@ -529,7 +529,7 @@ get(std::array) 访问array的一个元素</li>
   std::get&lt;<span class="pl-c1">0</span>&gt;(arr) = <span class="pl-c1">10</span>;
   <span class="pl-c"><span class="pl-c">//</span> 访问值</span>
   std::cout &lt;&lt; std::get&lt;<span class="pl-c1">0</span>&gt;(arr) &lt;&lt; std::endl; <span class="pl-c"><span class="pl-c">//</span> 10</span></pre></div>
-<p><a id="user-content-arr13"></a><br>
+<p><a name="user-content-arr13"></a><br>
 std::swap(std::array) 特化std::swap算法</p>
 <div class="highlight highlight-source-c++"><pre class="notranslate">  std::array&lt;<span class="pl-k">int</span>, <span class="pl-c1">5</span>&gt; arr1{<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>, <span class="pl-c1">5</span>};
   std::array&lt;<span class="pl-k">int</span>, <span class="pl-c1">5</span>&gt; arr2{<span class="pl-c1">10</span>, <span class="pl-c1">20</span>, <span class="pl-c1">30</span>, <span class="pl-c1">40</span>, <span class="pl-c1">50</span>};
@@ -546,14 +546,14 @@ std::swap(std::array) 特化std::swap算法</p>
     <span class="pl-c"><span class="pl-c">//</span> 1 2 3 4 5</span>
   }
   std::cout &lt;&lt; std::endl;</pre></div>
-<p><a id="user-content-arr14"></a><br>
+<p><a name="user-content-arr14"></a><br>
 to_array 从内建数组创建std::array对象<br>
 <code class="notranslate">C++20支持</code></p>
 <ul>
 <li>辅助类<br>
-<a id="user-content-arr15"></a><br>
+<a name="user-content-arr15"></a><br>
 std::tuple_size&lt;std::array&gt; 提供作为编译时常量表达式访问 std::array 中元素数量的方法<br>
-<a id="user-content-arr16"></a><br>
+<a name="user-content-arr16"></a><br>
 std::tuple_element&lt;std::array&gt; 使用 tuple 式接口，提供 array 元素类型的编译时索引访问</li>
 </ul></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
